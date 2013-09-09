@@ -1,0 +1,99 @@
+.home, .container
+	position: relative
+	.login
+		text-align: center
+		background: #cab588
+		height: 354px
+		&:before
+			content: ''
+			display: inline-block
+			height: 100%
+			vertical-align: middle
+			margin-right: -.25em
+		.content
+			display: inline-block
+			vertical-align: middle
+			width: 300px
+			.clearfix
+				margin-bottom: 30px
+			h4
+				font-size: 34px
+				color: $white
+				font-weight: 300px
+				font-style: italic
+		input
+			width: 80%
+			margin: 15px 0 25px
+			background-color: $white
+			border: 0px solid
+			height: 25px
+		.login_button
+			width: 45%
+			background: #b59d61
+			padding: 10px 15px
+			margin-bottom: 20px
+			@include transition (all .5s ease-in-out)
+			&:hover
+				background: #5e3a16
+		.sub_link
+			font-size: 12px
+		textarea:focus, input:focus
+			outline: 0
+.home
+	background: $white
+	.photo_cta
+		background: url(../img/main_cta_home.jpg) no-repeat center center
+		background-size: cover
+		height: 354px
+		color: $white
+		.content
+			text-align: center
+			margin: 0 40px
+			padding: 20px 0
+			h1
+				font-size: 26px
+				font-style: italic
+				border-top: 1px solid $white
+				padding:
+					top: 20px
+			p
+				border-bottom: 1px solid $white
+				padding:
+					bottom: 20px
+			a
+				background: $light_cream
+				color: $dark_gray
+				padding: 10px 15px
+				position: relative
+				top: 35px
+				@include transition (all .2s)
+				&:hover
+					border: 3px solid #fff
+	.cta1
+		background: #9b814e
+	.cta2
+		background: #7f612d
+	.cta3
+		background: #5e3a16
+	.cta1, .cta2, .cta3
+		height: 300px
+		text-align: center
+		color: $light_cream
+		h2
+			font-style: italic
+		p
+			padding: 0 30px
+			font-weight: 300
+	.secondary_cta
+		min-height: 275px
+		background-size: cover
+		.content
+			bottom: 0
+			width: 90%
+			background: $trans_black
+			h5
+				color: $light_cream
+	.news
+		background: url(../img/community_news_bg.jpg) no-repeat center center
+	.tools
+		background: url(../img/tools_bg.jpg) no-repeat center center

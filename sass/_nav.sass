@@ -1,0 +1,213 @@
+.top_subnav
+	position: relative
+	top: 0
+	width: 100%
+	background: $dark_gray
+	font-size: 13px
+	text-transform: uppercase
+	color: #999
+	.container
+		background: $dark_gray
+		ul
+			padding: 10px 0
+			text-align: center
+			li
+				display: inline
+				margin: 0 15px
+nav
+	position: relative
+	top: 0
+	left: 0
+	width: 100%
+	background: $white
+	height: 120px
+	z-index: 99
+	a.logo
+		position: absolute
+		top: 16px
+		left: 0
+		background: url(../img/logo.png) no-repeat
+		width: 328px
+		height: 92px
+		background-size: 328px 92px
+		@media only screen and (min-width: 320px) and (max-width: 768px)
+			top: 20px
+			width: 200px
+			height: 30px
+			background-size: 200px 30px
+			left: 20px
+	ul.main_nav
+		float: right
+		list-style: none
+		text-transform: uppercase
+		letter-spacing: 1px
+		line-height: 120px
+		li
+			display: inline-block 
+			margin: 0 20px
+			padding:
+				right: 4px
+			&:after
+				content: ''
+				color: $cu_gold
+			a
+				color: #484848
+				text-decoration: none
+				font-size: 18px
+				font-weight: 300
+				padding:
+					right: 45px
+				background: url(../img/carrot.png) no-repeat right center
+				@include transition (color .5s)
+				&:hover
+					color: $cu_gold
+			@media only screen and (min-width: 320px) and (max-width: 768px)
+				display: block
+				width: 100%
+				background: rgba(0,0,0,.8)
+				text-align: center
+				margin: 0
+				border-bottom: 1px solid $cu_gold
+				&:after
+					content: " "
+				a
+					padding: 0
+					font-size: 18px
+					font-weight: 700
+			a.search
+				width: 267px
+				height: 42px
+				background: url(../img/search.png) no-repeat bottom right
+				display: inline-block
+		li.last
+			a
+				padding:
+					right: 0
+			&:after
+				content: " "
+	ul.nav-active
+		display: block
+	.nav_wrap
+		@media only screen and (min-width: 320px) and (max-width: 768px)
+			width: 100%
+.nav_wrap
+	text-align: center
+	max-height: 500px
+	@include transition (max-height .5s ease)
+	.navlinks
+		position: relative
+		width: auto
+		display: inline-block
+		margin: 0 auto 20px
+		text-align: left
+		overflow: hidden
+		font-weight: 300
+		color: $light_gray
+		section
+			float: left
+			margin: 10px 25px
+			h5
+				text-transform: uppercase
+				font-size: 22px
+				line-height: 36px
+				font-weight: 300
+				color: $dark_gray
+			h6
+				color: $dark_gray
+				font-weight: 300
+				font-size: 18px
+				text-transform: uppercase
+				line-height: 32px
+			a
+				color: $light_gray
+.collapsed
+	max-height: 0px
+	margin: 0
+.overlay_bg
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 0
+	z-index: -1
+	background: $trans_black
+.overlay_init
+	opacity: 1
+	z-index: 998
+	cursor: url(../img/close_cursor.png), auto
+.branch_locator
+	position: absolute
+	width: 420px
+	height: 440px
+	padding: 0px
+	background: #FFFFFF
+	-webkit-border-radius: 0px
+	-moz-border-radius: 0px
+	border: #6D6E70 solid 1px
+	margin-top: -500px
+	z-index: 999
+	left: 35%
+	@include transition (margin .5s ease)
+	&:after 
+		content: ''
+		position: absolute
+		border-style: solid
+		border-width: 0 15px 15px
+		border-color: #FFFFFF transparent
+		display: block
+		width: 0
+		z-index: 1
+		margin-left: -15px
+		top: -15px
+		left: 50%
+	&:before 
+		content: ''
+		position: absolute
+		border-style: solid
+		border-width: 0 15px 15px
+		border-color: #6D6E70 transparent
+		display: block
+		width: 0
+		z-index: 0
+		margin-left: -15px
+		top: -16px
+		left: 50%
+	.header_wrap
+		height: 120px
+		margin: 0
+		padding: 0
+		h3
+			font-family: 'Lato', sans-serif
+			font-weight: 300
+			text-align: center
+			padding: 20px 0
+			color: #B59D61
+		input
+			width: 230px
+			height: 35px
+			padding:
+				right: 40px
+				left: 10px
+			border: 1px solid #b7b7b7
+			background: url(../img/search_icon.png) no-repeat right center
+			outline: 0
+			margin:
+				left: 60px
+				bottom: 20px
+	.location_wrap
+		height: 320px
+		overflow-y: scroll
+		.location
+			padding: 20px
+			border:
+				bottom: 1px solid $light_gray
+			section
+				float: left
+			.selector_btn
+				float: right
+				background: #6D6E70
+				padding: 10px 20px
+.branch_drop
+	margin:
+		top: 20px
